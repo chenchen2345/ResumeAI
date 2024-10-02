@@ -1,0 +1,56 @@
+\documentclass{ctexart}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{array}
+
+% 设置页面边距
+\geometry{a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% 设置section标题格式
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+% 设置表格格式，前面置为0em
+\setlength{\tabcolsep}{0em}
+% 设置makebox格式，前面置为0em
+\setlength{\parindent}{0em}
+
+% 设置无页码
+\pagestyle{empty}
+
+\begin{document}
+
+% 姓名
+\begin{center}
+    {\Huge \textbf{{{name}}}}
+\end{center}
+
+% 联系信息
+\begin{center}
+    年龄：{{age}} \quad 性别：{{gender}}\\
+    手机号：{{phone_number}} \quad 邮箱：{{email}}
+\end{center}
+
+% 教育背景
+\section*{教育背景}
+{{education}}
+
+% 工作经历
+\section*{工作经历}
+\begin{itemize}[leftmargin=*]
+    {{work_experience}}
+\end{itemize}
+
+% 项目经历
+\section*{项目经历}
+\begin{itemize}[leftmargin=*]
+    {{projects}}
+\end{itemize}
+
+% 技能
+\section*{技能}
+\begin{itemize}[leftmargin=*]
+    {{skills}}
+\end{itemize}
+
+\end{document}
